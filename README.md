@@ -18,3 +18,7 @@ npm run start
 
 # go to http://localhost:3000
 ```
+
+
+## resources:
++ https://react-server.io/
