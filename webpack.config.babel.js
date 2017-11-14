@@ -13,7 +13,7 @@ let Config = {
   },
   entry: [
     'babel-polyfill',
-    path.join(Dir.src, 'client.jsx'),
+    path.join(Dir.src, 'client.js'),
   ],
   output: {
     path: path.join(Dir.public, 'build'),
