@@ -1,19 +1,19 @@
 {
-  "name": "we-must-react-ep-01",
+  "name": "react-ssr",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/foxhound87/we-must-react-ep-01.git"
+    "url": "git+ssh://git@github.com/afeiship/react-ssr.git"
   },
   "keywords": [],
-  "author": "Claudio Savino <claudio.savino@me.com> (https://twitter.com/foxhound87)",
+  "author": "afei",
   "license": "ISC",
-  "homepage": "https://github.com/foxhound87/we-must-react-ep-01",
+  "homepage": "https://github.com/foxhound87/react-ssr",
   "scripts": {
     "lint": "eslint src --ext .jsx,.js",
-    "clean": "rm -rf ./public/build",
+    "clean": "rimraf ./public/build",
     "build:watch": "npm run clean && NODE_ENV=development webpack -d --watch",
     "build:dev": "npm run clean && NODE_ENV=development webpack -d",
     "build:prod": "npm run clean && NODE_ENV=production webpack -p",
@@ -54,6 +54,7 @@
     "eslint-plugin-import": "1.10.2",
     "eslint-plugin-jsx-a11y": "2.0.0",
     "eslint-plugin-react": "5.2.2",
+    "rimraf": "^2.6.2",
     "webpack": "1.13.1",
     "webpack-dev-middleware": "1.6.1",
     "webpack-hot-middleware": "2.12.1",
