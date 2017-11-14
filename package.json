@@ -14,30 +14,25 @@
   "scripts": {
     "lint": "eslint src --ext .jsx,.js",
     "clean": "rimraf ./public/build",
-    "build:watch": "npm run clean && NODE_ENV=development webpack -d --watch",
     "build:dev": "npm run clean && NODE_ENV=development webpack -d",
     "build:prod": "npm run clean && NODE_ENV=production webpack -p",
     "server:dev": "NODE_ENV=development node server.js",
     "server:prod": "NODE_ENV=production node server.js"
   },
   "dependencies": {
+    "react": "15.2.0",
+    "react-dom": "15.2.0",
+    "react-router": "2.5.2"
+  },
+  "devDependencies": {
     "dotenv": "2.0.0",
     "ejs": "2.4.2",
     "express": "4.14.0",
     "getenv": "0.6.0",
     "http": "0.0.0",
     "isdev": "1.0.1",
-    "react": "15.2.0",
-    "react-dom": "15.2.0",
-    "react-router": "2.5.2",
     "serve-static": "1.11.1",
-    "winston": "2.2.0"
-  },
-  "peerDependencies": {
-    "react": "15.2.0",
-    "react-dom": "15.2.0"
-  },
-  "devDependencies": {
+    "winston": "2.2.0",
     "babel-core": "6.10.4",
     "babel-eslint": "6.1.2",
     "babel-loader": "6.2.4",

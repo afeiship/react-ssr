@@ -2,11 +2,15 @@ import webpack from 'webpack';
 import merge from 'webpack-merge';
 import path from 'path';
 import isDev from 'isdev';
-import { Dir } from './src/config';
+import {Dir} from './src/config';
 
 const TARGET = process.env.npm_lifecycle_event;
 
 let Config = {
+  externals: {
+    'react': 'React',
+    'react-dom': 'ReactDOM',
+  },
   entry: [
     'babel-polyfill',
     path.join(Dir.src, 'client.jsx'),
@@ -42,7 +46,7 @@ if (TARGET === 'build:prod' && !isDev) {
   Config = merge(Config, {
     bail: true,
     devtool: 'source-map',
-    output: { publicPath: '/build/' },
+    output: {publicPath: '/build/'},
     plugins: [
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.UglifyJsPlugin({
