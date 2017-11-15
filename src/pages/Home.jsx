@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 export default class Home extends Component {
 
@@ -9,16 +9,20 @@ export default class Home extends Component {
     }
   } // will be used for server side rendering
 
-  _onClick = e =>{
-    console.log(e,'test1');
+  _onClick = e => {
+    console.log(e, 'test1');
   };
 
   render() {
-    const { test, name } = Home.fetchData();
+    console.log(
+      'from server:',
+      Home.fetchData()
+    );
+    const {test, name} = Home.fetchData();
     return (
       <div className="home-view">
-      <h1>Home Page {test} - {name}</h1>
-      <button onClick={this._onClick}>Test button</button>
+        <h1>Home Page {test} - {name}</h1>
+        <button onClick={this._onClick}>Test button</button>
       </div>
     );
   }

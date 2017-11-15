@@ -101,5 +101,4 @@ if (TARGET === 'server:dev' && isDev) {
   });
 }
 
-const WebpackConfig = Config;
-export default WebpackConfig;
+export default Config;

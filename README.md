@@ -2,6 +2,7 @@
 > React server side rendering.
 
 ## todos:
++ [x] react router v4
 + [ ] webpack to 3.0
 
 ## resources:

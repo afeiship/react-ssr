@@ -9,8 +9,8 @@
   },
   "keywords": [],
   "author": "afei",
-  "license": "ISC",
-  "homepage": "https://github.com/foxhound87/react-ssr",
+  "license": "MIT",
+  "homepage": "https://github.com/afeiship/react-ssr",
   "scripts": {
     "lint": "eslint src --ext .jsx,.js",
     "clean": "rimraf ./public/build",
