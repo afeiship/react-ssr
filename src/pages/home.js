@@ -11,6 +11,7 @@ export default class Home extends Component {
   } // will be used for server side rendering
 
   _onClick = e => {
+    console.log('update local!');
     AppBase.$.local = {
       ts: Date.now()
     };

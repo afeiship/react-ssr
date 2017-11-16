@@ -17,6 +17,9 @@ export default (Router) => {
           },
           myInitial: 0,
           sum: 0
+        },
+        local: {
+          test: 'by fei'
         }
       }
     }
