@@ -30,6 +30,11 @@ let Config = {
     //   exclude: /node_modules/,
     //   include: Dir.src,
     // }],
+    loaders: [{
+      test: /\.jsx?$/,
+      loader: 'babel-loader',
+      exclude: /node_modules/,
+    }]
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),      // Webpack 1.0
@@ -58,27 +63,9 @@ if (TARGET === 'build:prod' && !isDev) {
         },
       }),
     ],
-    module: {
-      loaders: [{
-        test: /\.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-      }],
-    },
   });
 }
 
-if (TARGET === 'server:prod' && !isDev) {
-  Config = merge(Config, {
-    module: {
-      loaders: [{
-        test: /\.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-      }],
-    },
-  });
-}
 
 if (TARGET === 'server:dev' && isDev) {
   Config = merge(Config, {
