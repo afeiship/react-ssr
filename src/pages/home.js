@@ -1,3 +1,4 @@
+import AppBase from 'components/scripts/index';
 import React, {Component} from 'react';
 
 export default class Home extends Component {
@@ -10,14 +11,13 @@ export default class Home extends Component {
   } // will be used for server side rendering
 
   _onClick = e => {
-    console.log(e, 'test1');
+    AppBase.$.local = {
+      ts: Date.now()
+    };
   };
 
   render() {
-    console.log(
-      'from server:',
-      Home.fetchData()
-    );
+    console.log('render home!');
     const {test, name} = Home.fetchData();
     return (
       <div className="home-view">

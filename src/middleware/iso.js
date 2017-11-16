@@ -2,14 +2,14 @@ import React from 'react';
 import isDev from 'isdev';
 import {renderToString, renderToStaticMarkup} from 'react-dom/server';
 import {StaticRouter} from 'react-router-dom';
-import App from '~/src/app';
+import {Server} from '~/src/app';
 
 
 export function isoMiddleware(req, res) {
   const context = {};
   const html = renderToString(
     <StaticRouter location={req.url} context={context}>
-      <App />
+      <Server />
     </StaticRouter>
   );
 

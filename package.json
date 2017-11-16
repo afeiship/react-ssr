@@ -17,16 +17,21 @@
   "scripts": {
     "lint": "eslint src --ext .jsx,.js",
     "clean": "rimraf ./public/build",
-    "prebuiild:dev":"npm run clean",
-    "prebuiild:prod":"npm run clean",
+    "prebuiild:dev": "npm run clean",
+    "prebuiild:prod": "npm run clean",
     "build:dev": "NODE_ENV=development webpack -d",
     "build:prod": "NODE_ENV=production webpack -p",
     "server:dev": "NODE_ENV=development node server.js",
     "server:prod": "NODE_ENV=production node server.js"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "next-js-core2": "github:afeiship/next-js-core2",
+    "next-react-redux": "github:afeiship/next-react-redux",
+    "prop-types": "^15.6.0",
     "react": "15.2.0",
     "react-dom": "15.2.0",
+    "react-router-config": "^1.0.0-beta.4",
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
