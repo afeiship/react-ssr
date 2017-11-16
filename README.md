@@ -22,6 +22,7 @@
 + [ ] migrate favicon
 + [ ] migrate statics webpack plugin
 + [ ] sass && import views/* support
++ [ ] optimze react & app size
 
 
 ## resources:
