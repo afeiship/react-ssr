@@ -17,8 +17,10 @@
   "scripts": {
     "lint": "eslint src --ext .jsx,.js",
     "clean": "rimraf ./public/build",
-    "build:dev": "npm run clean && NODE_ENV=development webpack -d",
-    "build:prod": "npm run clean && NODE_ENV=production webpack",
+    "prebuiild:dev":"npm run clean",
+    "prebuiild:prod":"npm run clean",
+    "build:dev": "NODE_ENV=development webpack -d",
+    "build:prod": "NODE_ENV=production webpack -p",
     "server:dev": "NODE_ENV=development node server.js",
     "server:prod": "NODE_ENV=production node server.js"
   },

@@ -9,6 +9,7 @@ export default class extends React.Component {
     return (
       <div className="router-wrapper">
         <h1>Layout</h1>
+        <p>Just s demo page!!</p>
         <ul>
           <li><NavLink activeClassName='active' exact to="/">Home</NavLink></li>
           <li><NavLink activeClassName='active' to="/test">Test</NavLink></li>
