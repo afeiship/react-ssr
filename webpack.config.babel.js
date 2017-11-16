@@ -20,8 +20,7 @@ let Config = {
     filename: 'bundle.js',
   },
   resolve: {
-    root: Dir.src,
-    extensions: ['', '.js', '.jsx', '.json'],
+    extensions: ['.js', '.jsx', '.json'],
   },
   module: {
     // preLoaders: [{
@@ -37,8 +36,8 @@ let Config = {
     }]
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),      // Webpack 1.0
-    // new webpack.optimize.OccurrenceOrderPlugin(),  // Webpack 2.0 fixed this mispelling
+    // new webpack.optimize.OccurenceOrderPlugin(),      // Webpack 1.0
+    new webpack.optimize.OccurrenceOrderPlugin(),  // Webpack 2.0 fixed this mispelling
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
@@ -53,15 +52,45 @@ if (TARGET === 'build:prod' && !isDev) {
     devtool: 'source-map',
     output: {publicPath: '/build/'},
     plugins: [
-      new webpack.optimize.DedupePlugin(),
       new webpack.optimize.UglifyJsPlugin({
-        comments: false,
-        dropDebugger: true,
-        dropConsole: true,
-        compressor: {
-          warnings: false,
+        "parallel": {
+          "cache": true,
+          "workers": 2
         },
-      }),
+        "compress": {
+          "negate_iife": false,
+          "unsafe_comps": true,
+          "properties": true,
+          "keep_fargs": false,
+          "pure_getters": true,
+          "collapse_vars": true,
+          "unsafe": true,
+          "warnings": false,
+          "screw_ie8": true,
+          "sequences": true,
+          "dead_code": true,
+          "drop_debugger": true,
+          "comparisons": true,
+          "conditionals": true,
+          "evaluate": true,
+          "booleans": true,
+          "loops": true,
+          "unused": true,
+          "hoist_funs": true,
+          "if_return": true,
+          "join_vars": true,
+          "cascade": true,
+          "drop_console": true,
+          "pure_funcs": [
+            "classCallCheck",
+            "invariant",
+            "warning"
+          ]
+        },
+        "output": {
+          "comments": false
+        }
+      })
     ],
   });
 }
@@ -73,7 +102,6 @@ if (TARGET === 'server:dev' && isDev) {
     entry: ['webpack-hot-middleware/client'],
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
-      new webpack.NoErrorsPlugin(),
     ],
     module: {
       loaders: [{
