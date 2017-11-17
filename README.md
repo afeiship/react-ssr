@@ -30,6 +30,7 @@
 + [ ] optimize react & app size
 + [ ] express to KOA?
 + [ ] API fetchData
++ [ ] react link or import mode
 
 ## resources:
 + https://github.com/foxhound87/we-must-react-ep-04
