@@ -13,6 +13,7 @@
 + [x] react router v4
 + [x] webpack to 3.0
 + [x] next-react-redux migrate
++ [ ] optimize npm scripts
 + [ ] update react hot reload
 + [ ] webpack dll config file
 + [ ] next-js-core2
