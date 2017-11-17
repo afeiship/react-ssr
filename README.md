@@ -31,6 +31,8 @@
 + [ ] express to KOA?
 + [ ] API fetchData
 + [ ] react link or import mode
++ [ ] public OR dist?
++ [ ] preact ?
 
 ## resources:
 + https://github.com/foxhound87/we-must-react-ep-04
