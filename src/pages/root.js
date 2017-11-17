@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import {renderRoutes} from 'react-router-config'
-import {
-  Route,
-  NavLink
-} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 export default class Test extends Component {
 
   static fetchData() {
