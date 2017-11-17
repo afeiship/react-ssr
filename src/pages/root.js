@@ -13,7 +13,7 @@ export default class Test extends Component {
     const {route} = this.props;
     return (
       <div className="app route-container">
-        <h1>Layout!-A!</h1>
+        <h1>Layout!</h1>
         <p>Just s demo page!!</p>
         <ul>
           <li><NavLink activeClassName='active' exact to="/">Home</NavLink></li>

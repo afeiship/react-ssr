@@ -14,6 +14,8 @@
 + [x] webpack to 3.0
 + [x] next-react-redux migrate
 + [x] update react hot reload
++ [ ] bug: home page will render twice
++ [ ] optmize dev/prod webpack file
 + [ ] hash for js/css files
 + [ ] images/fonts support
 + [ ] optimize npm scripts
@@ -32,3 +34,6 @@
 ## resources:
 + https://github.com/foxhound87/we-must-react-ep-04
 + https://github.com/mz026/universal-redux-template/issues/57
++ https://github.com/babel/babel-loader/issues/422
++ http://www.jianshu.com/p/e3adc9b5f75c
++ https://www.cnblogs.com/BestMePeng/p/react_ssr.html
