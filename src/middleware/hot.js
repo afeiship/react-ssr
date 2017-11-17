@@ -3,22 +3,30 @@ import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import config from '~/build/webpack.common.babel';
 import webpack from 'webpack';
+import {resolve} from 'path';
 
-const bundler = webpack(config);
+const compiler = webpack(config);
 
 const middleware = [
-  webpackDevMiddleware(bundler, {
+  webpackDevMiddleware(compiler, {
     filename: config.output.filename,
     publicPath: config.output.publicPath,
-    hot: true,
+    progress: true,
+    inline: true,
+    quiet: true,
+    watchOptions: {
+      aggregateTimeout: 300,
+      poll: true
+    },
+    serverSideRender: false,
     stats: {
       colors: true,
     },
   }),
-  webpackHotMiddleware(bundler, {
+  webpackHotMiddleware(compiler, {
     log: console.log, // eslint-disable-line no-console
   }),
   // historyFallback(),
 ];
 
-export { middleware as hotMiddleware };
+export {middleware as hotMiddleware};

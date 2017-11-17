@@ -10,15 +10,16 @@ export default class Test extends Component {
   } // will be used for server side rendering
 
   render() {
+    const {route} = this.props;
     return (
       <div className="app route-container">
-        <h1>Layout</h1>
+        <h1>Layout!-A!</h1>
         <p>Just s demo page!!</p>
         <ul>
           <li><NavLink activeClassName='active' exact to="/">Home</NavLink></li>
           <li><NavLink activeClassName='active' to="/test">Test</NavLink></li>
         </ul>
-        {renderRoutes(this.props.route.routes)}
+        {renderRoutes(route.routes)}
       </div>
     );
   }

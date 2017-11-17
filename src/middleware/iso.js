@@ -7,7 +7,7 @@ import {Server} from '~/src/app';
 
 export function isoMiddleware(req, res) {
   const context = {};
-  const html = renderToString(
+  const html = renderToStaticMarkup(
     <StaticRouter location={req.url} context={context}>
       <Server />
     </StaticRouter>
