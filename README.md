@@ -15,7 +15,7 @@
 + [x] next-react-redux migrate
 + [x] update react hot reload
 + [ ] bug: home page will render twice
-+ [ ] optmize dev/prod webpack file
++ [ ] optimize dev/prod webpack file
 + [ ] hash for js/css files
 + [ ] images/fonts support
 + [ ] optimize npm scripts
