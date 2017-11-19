@@ -27,6 +27,7 @@
 + [ ] migrate favicon
 + [ ] migrate statics webpack plugin
 + [ ] sass && import views/* support
++ [ ] nice sourceMap for js/css
 + [ ] optimize react & app size
 + [ ] express to KOA?
 + [ ] API fetchData
