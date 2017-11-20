@@ -18,7 +18,7 @@ const middleware = [
       aggregateTimeout: 300,
       poll: true
     },
-    serverSideRender: false,
+    serverSideRender: true,
     stats: {
       colors: true,
     },

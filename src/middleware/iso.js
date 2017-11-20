@@ -7,6 +7,7 @@ import { matchPath } from 'react-router';
 
 
 export function isoMiddleware(req, res) {
+  console.log(req.url);
   const context = {};
   const html = renderToString(
     <StaticRouter location={req.url} context={context}>
@@ -14,10 +15,15 @@ export function isoMiddleware(req, res) {
     </StaticRouter>
   );
 
-  res
-    .status(200)
-    .render('index', {
-      build: isDev ? null : '/build',
-      root: html,
-    });
+  // context.url will contain the URL to redirect to if a <Redirect> was used
+  if (context.url) {
+    res.status(302);
+  } else {
+    res
+      .status(200)
+      .render('index', {
+        build: isDev ? null : '/build',
+        root: html,
+      });
+  }
 }
