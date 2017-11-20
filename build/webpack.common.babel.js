@@ -1,12 +1,10 @@
 import webpack from 'webpack';
 import {resolve} from 'path';
-import {Dir} from '../src/config';
 
 
 export default {
   entry: [
     'babel-polyfill',
-    'webpack-hot-middleware/client',
     resolve(__dirname, '../src/client.js')
   ],
   output: {
@@ -29,13 +27,6 @@ export default {
         test: /\.jsx?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
-      }, {
-        test: /\.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: ['react-hmre'],
-        },
       }
     ]
   },
@@ -45,7 +36,7 @@ export default {
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),  // Webpack 2.0 fixed this mispelling
-    new webpack.HotModuleReplacementPlugin(),
+
     // Use NoErrorsPlugin for webpack 1.x
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
