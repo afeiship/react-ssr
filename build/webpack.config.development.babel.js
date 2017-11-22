@@ -28,7 +28,7 @@ export default merge(commonConfig, {
   devServer: {
     hot: true,
     stats: 'errors-only',
-    compress: true,
+    compress: false,
     historyApiFallback: true,
     headers: {
       "Access-Control-Allow-Origin": "*",
