@@ -41,3 +41,5 @@
 + https://github.com/babel/babel-loader/issues/422
 + http://www.jianshu.com/p/e3adc9b5f75c
 + https://www.cnblogs.com/BestMePeng/p/react_ssr.html
++ http://www.cnblogs.com/rubylouvre/p/5158923.html
++ https://www.npmjs.com/package/webpack-manifest-plugin

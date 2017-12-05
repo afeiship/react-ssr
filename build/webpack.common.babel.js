@@ -75,7 +75,7 @@ export default {
   },
 
   plugins: [
-    new ManifestPlugin(),
+    new ManifestPlugin({ writeToFileEmit: true }),
     new webpack.optimize.OccurrenceOrderPlugin(),  // Webpack 2.0 fixed this mispelling
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({

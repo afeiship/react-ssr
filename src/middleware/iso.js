@@ -4,17 +4,22 @@ import {renderToString, renderToStaticMarkup} from 'react-dom/server';
 import {StaticRouter} from 'react-router-dom';
 import {Server} from '~/src/app';
 import { matchPath } from 'react-router';
+///import manifestJson from '~/public/build/manifest.json';
+
+// console.log(manifestJson);
 
 
 export function isoMiddleware(req, res) {
-  console.log(req.url);
   const context = {};
+  const manifest = require('~/public/build/manifest.json');
   const html = renderToString(
     <StaticRouter location={req.url} context={context}>
       <Server />
     </StaticRouter>
   );
 
+
+  console.log(html);
   // context.url will contain the URL to redirect to if a <Redirect> was used
   if (context.url) {
     res.status(302);
@@ -23,7 +28,9 @@ export function isoMiddleware(req, res) {
       .status(200)
       .render('index', {
         build: isDev ? null : '/build',
-        root: html,
+        mainJs: manifest['main.js'],
+        vendorJs: manifest['vendor.js'],
+        root: html || null,
       });
   }
 }
