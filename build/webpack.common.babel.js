@@ -86,7 +86,6 @@ export default {
     new ExtractTextPlugin('[name]-[hash].css'),
     new webpack.ProvidePlugin({
       nx: 'next-js-core2',
-      autobind: 'autobind-decorator',
       mixin: 'mixin-decorator',
     }),
     new HtmlWebpackPlugin({
