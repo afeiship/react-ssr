@@ -20,7 +20,7 @@
 + [ ] images/fonts support
 + [ ] optimize npm scripts
 + [ ] webpack dll config file
-+ [ ] next-js-core2
++ [x] next-js-core2
 + [ ] nx/React/ReactDom to global
 + [ ] migrate eslint
 + [ ] migrate version control dev/master 
