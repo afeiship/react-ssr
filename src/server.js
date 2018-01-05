@@ -8,6 +8,8 @@ import {logServerConfig} from './logger';
 
 import {hotMiddleware} from './middleware/hot';
 import {isoMiddleware} from './middleware/iso';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 const app = express();
 const server = http.createServer(app);
@@ -16,6 +18,7 @@ const server = http.createServer(app);
 app
   .set('view engine', 'ejs')
   .set('views', Dir.views);
+
 
 // loading the hot-middleware
 isDev && app.use(hotMiddleware);
@@ -29,4 +32,5 @@ server
   .listen(
     Config.port,
     Config.host,
-    (err) => logServerConfig(err));
+    (err) => logServerConfig(err)
+  );

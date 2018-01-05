@@ -3,7 +3,6 @@ import isDev from 'isdev';
 import {renderToString, renderToStaticMarkup} from 'react-dom/server';
 import {StaticRouter} from 'react-router-dom';
 import {Server} from '~/src/app';
-import { matchPath } from 'react-router';
 ///import manifestJson from '~/public/build/manifest.json';
 
 // console.log(manifestJson);
@@ -18,13 +17,12 @@ export function isoMiddleware(req, res) {
     </StaticRouter>
   );
 
-
-  console.log(html);
   // context.url will contain the URL to redirect to if a <Redirect> was used
   if (context.url) {
     console.log('root is not defined...');
     res.status(302);
   } else {
+    console.log('200..');
     res
       .status(200)
       .render('index', {
