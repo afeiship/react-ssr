@@ -1,6 +1,7 @@
 import Root from './pages/root';
 import Home from './pages/home';
 import Test from './pages/test';
+import Login from './pages/login';
 
 
 export default [
@@ -15,6 +16,10 @@ export default [
       {
         path: '/test/',
         component: Test
+      },
+      {
+        path: '/login/',
+        component: Login
       }
     ]
   }
