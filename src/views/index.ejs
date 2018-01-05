@@ -5,20 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
 </head>
 <body>
-<main id="root">
-    <% if (typeof root !== 'undefined') { %>
-    <%= root %>
-    <% } %>
-</main>
+<main id="root"></main>
 
 <!-- Dependencies -->
-<script src="https://cdn.bootcss.com/react/15.6.1/react.js"></script>
-<script src="https://cdn.bootcss.com/react/15.6.1/react-dom.js"></script>
-
-<% if (typeof vendorJs !== 'undefined') { %>
-<script src="<%= vendorJs %>"></script>
-<script src="<%= mainJs %>"></script>
-<% } %>
-
+<script src="https://cdn.bootcss.com/react/15.2.0/react.js"></script>
+<script src="https://cdn.bootcss.com/react/15.2.0/react-dom.js"></script>
+<script src="<%- vendorJs %>"></script>
+<script src="<%- mainJs %>"></script>
 </body>
 </html>

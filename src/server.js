@@ -1,5 +1,4 @@
 import isDev from 'isdev';
-import http from 'http';
 import express from 'express';
 import serveStatic from 'serve-static';
 
@@ -8,11 +7,8 @@ import {logServerConfig} from './logger';
 
 import {hotMiddleware} from './middleware/hot';
 import {isoMiddleware} from './middleware/iso';
-import React from 'react';
-import ReactDOM from 'react-dom';
 
 const app = express();
-const server = http.createServer(app);
 
 // use ejs template engine on express
 app
@@ -28,9 +24,9 @@ app
   .use('/static', serveStatic(Dir.static))
   .use(isoMiddleware);
 
-server
-  .listen(
-    Config.port,
-    Config.host,
-    (err) => logServerConfig(err)
-  );
+
+app.listen(
+  Config.port,
+  Config.host,
+  (err) => logServerConfig(err)
+);
