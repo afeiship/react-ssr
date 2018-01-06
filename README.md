@@ -15,7 +15,7 @@
 + [x] next-react-redux migrate
 + [x] update react hot reload
 + [x] optimize dev/prod webpack file
-+ [ ] bug: home page will render twice (keywords: react server render twice)
++ [x] bug: home page will render twice (keywords: react server render twice) // ROUTE ref ='root'
 + [x] hash for js/css files
 + [ ] images/fonts support
 + [ ] optimize npm scripts

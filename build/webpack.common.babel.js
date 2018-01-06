@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import {resolve, join} from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import autoprefixer from 'autoprefixer';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ManifestPlugin from 'webpack-manifest-plugin';
 
 
@@ -86,6 +87,10 @@ export default {
     new webpack.ProvidePlugin({
       nx: 'next-js-core2',
       mixin: 'mixin-decorator',
+    }),
+    new HtmlWebpackPlugin({
+      template: resolve(__dirname, '../src/views/index_dev.ejs'),
+      title: 'Hot Module Replacement'
     }),
     // build optimization plugins
     new webpack.optimize.CommonsChunkPlugin({
