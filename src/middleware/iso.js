@@ -19,10 +19,8 @@ export function isoMiddleware(req, res) {
 
   // context.url will contain the URL to redirect to if a <Redirect> was used
   if (context.url) {
-    console.log('root is not defined...');
     res.status(302);
   } else {
-    console.log('200..');
     res
       .status(200)
       .render('index', {

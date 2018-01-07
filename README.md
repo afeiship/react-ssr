@@ -34,6 +34,7 @@
 + [ ] react link or import mode
 + [ ] public OR dist?
 + [ ] preact ?
++ [ ] http://localhost:8080/__webpack_hmr 404
 
 ## resources:
 + https://github.com/foxhound87/we-must-react-ep-04

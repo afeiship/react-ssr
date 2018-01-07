@@ -21,7 +21,6 @@ export default merge(commonConfig, {
     ]
   },
   plugins: [
-    new webpack.NoErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
   //devtools:
