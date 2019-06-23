@@ -1,7 +1,9 @@
-/public/build
-/node_modules
-/dist
-.idea
-package-lock.json
-Gemfile.lock
+node_modules
+bower_components
+coverage
+npm-debug.log
 yarn.lock
+package-lock.json
+.DS_Store
+.idea
+.vscode
