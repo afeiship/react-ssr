@@ -1,18 +1,16 @@
-import React, { Component } from "react";
-import "./App.css";
-const logo = 'http://himg.bdimg.com/sys/portrait/item/be10475f686d6c73db00.jpg'
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import routes from './routes';
+import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React in the Server</h2>
-        </div>
-        <p className="App-intro">Isn't this cool?</p>
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <Switch>
+      {routes.map((route, i) => (
+        <Route key={i} {...route} />
+      ))}
+    </Switch>
+  );
+};
+
 export default App;

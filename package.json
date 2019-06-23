@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development webpack -w & NODE_ENV=development node server"
+    "dev": "NODE_ENV=development webpack -w & NODE_ENV=development nodemon server"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,17 @@
   },
   "homepage": "https://github.com/afeiship/react-ssr#readme",
   "dependencies": {
+    "@terebentina/react-popover": "^2.0.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash.orderby": "^4.6.0",
+    "node-time-ago": "^1.0.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "serialize-javascript": "^1.7.0",
+    "source-map-support": "^0.5.12"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.0",
@@ -30,6 +38,7 @@
     "css-loader": "^3.0.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^4.0.0",
+    "nodemon": "^1.19.1",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.18.2",
     "webpack": "^4.35.0",
