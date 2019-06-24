@@ -49364,6 +49364,7 @@ function (_Component) {
 
     _this = Object(_Users_feizheng_github_react_ssr_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_Users_feizheng_github_react_ssr_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(News).call(this, props));
     var initialData;
+    console.log(typeof window);
 
     if (__isBrowser__) {
       initialData = window.__initialData__;
@@ -49399,7 +49400,7 @@ function (_Component) {
         news: news,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 35
         },
         __self: this
       });

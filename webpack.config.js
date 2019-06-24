@@ -48,7 +48,7 @@ const browserConfig = {
       filename: 'public/css/[name].css'
     }),
     new webpack.BannerPlugin({
-      banner: 'this.__isBrowser__ = true;',
+      banner: '__isBrowser__ = true;',
       raw: true,
       include: /\.js$/
     })
@@ -93,7 +93,7 @@ const serverConfig = {
   },
   plugins: [
     new webpack.BannerPlugin({
-      banner: 'this.__isBrowser__ = false;',
+      banner: '__isBrowser__ = false;',
       raw: true,
       include: /\.js$/
     })

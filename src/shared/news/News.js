@@ -7,6 +7,7 @@ class News extends Component {
     super(props);
 
     let initialData;
+    console.log(typeof window);
     if (__isBrowser__) {
       initialData = window.__initialData__;
       delete window.__initialData__;
